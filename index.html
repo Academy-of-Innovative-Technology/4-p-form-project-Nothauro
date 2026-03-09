@@ -9,28 +9,59 @@
 </head>
 
 <body>
-    <h1>Town Hall Login</h1>
+  <h1>Town Hall Login</h1>
+
   <form>
     <fieldset>
-      <legend>Login Form</legend>
-   <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <input type="submit" value="Login">
-    <input type="reset" value="Reset">
-  </fieldset>
-<div class="links">
+     <legend>Login Form</legend>
+
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" placeholder="Username" pattern="[A-Za-z0-9]{3,}" title="Alphanumeric, min 3 characters" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Password" required>
+
+      <label for="email">Email Address</label>
+      <input id="email" type="email" name="email" placeholder="Email Address" required>
+
+      <fieldset>
+        <legend>User Type</legend>
+        <input id="role-resident" type="radio" name="role" value="resident" required>
+        <label for="role-resident">Resident</label>
+
+        <input id="role-visitor" type="radio" name="role" value="visitor">
+        <label for="role-visitor">Visitor</label>
+      </fieldset>
+
+      <div>
+        <input id="remember" type="checkbox" name="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <label for="department">Department</label>
+      <input id="department" list="departments" name="department" placeholder="Choose Department">
+      <datalist id="departments">
+        <option value="Parks &amp; Recreation">
+        <option value="Public Works">
+        <option value="Finance">
+        <option value="Planning &amp; Development">
+      </datalist>
+
+      <input type="submit" value="Login">
+      <input type="reset" value="Reset">
+    </fieldset>
+  </form>
+
+  <div class="links">
     <a href="https://www.townhall.wa.gov/">Town Hall Website</a>
     <a href="https://www.townhall.wa.gov/OnlineServices/Pages/OnlineServices.aspx">Online Services</a>
     <a href="https://www.townhall.wa.gov/OnlineServices/Pages/OnlineServices.aspx">Contact Us</a>
-</div>
-<div class="footer">
-<div class="footer">
-    <p>Copyright &copy; 2024 Town Hall. All rights reserved.</p>
-</div>
+  </div>
 
-  </form>
-  
+  <footer class="footer">
+    <p>Copyright &copy; 2024 Town Hall. All rights reserved.</p>
+  </footer>
+
 </body>
 
 </html>
